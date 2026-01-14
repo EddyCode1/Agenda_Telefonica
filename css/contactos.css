@@ -1,25 +1,51 @@
-
 body {
-          font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #000000);
-            height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #000000);
+    height: 100vh;
+}
 
-        }
-        ul {
-            max-width: 200px;
-            padding: 0;
-        }
-        li {
-            /*list-style: none;
-            background-color: rgba(217, 219, 230, 0); */
-            background-color: rgb(207, 209, 218);
-            border: 10px solid #ccc;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 20px;
-        }
-        .nombre {
-            font-weight: bold;
-            
-        }
-        
+ul {
+    max-width: 500px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.contacto-btn {
+    width: 100%;
+    background-color: rgb(207, 209, 218);
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.contacto-btn:hover {
+    background-color: rgb(190, 192, 205);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre {
+    font-weight: bold;
+}
