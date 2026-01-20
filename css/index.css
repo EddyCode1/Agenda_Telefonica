@@ -1,52 +1,93 @@
+/* =========================
+   BASE JAZZ CLUB
+========================= */
 body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #000000);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+/* =========================
+   LOGIN CARD
+========================= */
+.login-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 40px;
+    width: 350px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(128, 0, 32, 0.4);
+    position: relative;
+    overflow: hidden;
+}
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            text-align: center;
-        }
+.vinyl-disc {
+    width: 100px;
+    height: 100px;
+    background: repeating-radial-gradient(circle, #222, #000 5px);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #800020;
+    animation: spin 5s linear infinite;
+}
 
-        h1 {
-            margin-bottom: 20px;
-            color: #08a4ec;
-        }
+@keyframes spin { 100% { transform: rotate(360deg); } }
 
-        input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-        }
+.vinyl-label {
+    width: 30px; height: 30px;
+    background: #800020; border-radius: 50%;
+    font-size: 0.4rem; line-height: 30px;
+}
 
-        input:focus {
-            outline: none;
-            border-color: #4facfe;
-        }
+h1 {
+    font-size: 2rem; margin: 0;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0000;
+}
 
-        button {
-            width: 30%;
-            padding: 10px;
-            margin-left: 2px;
-            background: #4facfe;
-            color: white;
-            border-radius: 15px;
-            font-size: 20px;
-            cursor: all-scroll;
-        }
+.subtitle {
+    color: #800020; font-size: 0.7rem; letter-spacing: 2px;
+    margin-bottom: 30px; font-weight: bold;
+}
 
-        button:hover {
-            background: #00c6ff;
-        }
+/* =========================
+   INPUTS Y BOTÓN
+========================= */
+.input-field {
+    text-align: left; margin-bottom: 20px;
+}
+
+.input-field label {
+    font-size: 0.6rem; color: #666; display: block; margin-bottom: 5px;
+}
+
+input {
+    width: 100%; background: #000; border: none;
+    border-bottom: 2px solid #333;
+    padding: 10px 0; color: #fff; outline: none;
+    box-sizing: border-box;
+}
+
+input:focus { border-bottom-color: #800020; }
+
+.btn-login {
+    width: 100%; padding: 15px;
+    background: #800020; border: none;
+    color: white; font-weight: bold;
+    cursor: pointer; margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}

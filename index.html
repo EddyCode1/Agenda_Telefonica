@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Agenda_Telefonica/css/index.css">
     <title>Login</title>
-
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <div>
-        <h1>Inicio de Sesion</h1>
-        <input type="text" placeholder="Ingresa tu correo">
-        <input type="text" placeholder="Ingresa tu contraseña">
-        <button onclick="location.href='pages/contactos.html'">Siguiente</button>
+
+    <div class="login-card">
+        <div class="vinyl-header">
+            <div class="vinyl-disc">
+                <div class="vinyl-label">Bienvenido</div>
+            </div>
+        </div>
+
+        <h1>INICIA SESION</h1>
+        <p class="subtitle">AUTORIZACIÓN DE ACCESO</p>
+
+        <form class="login-form" onsubmit="event.preventDefault();">
+            <div class="input-field">
+                <label>Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre del usuario">
+            </div>
+            
+            <div class="input-field">
+                <label>Contraseña</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+
+           <button type="button" class="btn-login" onclick="guardarNombre()">
+                 ENTRAR AL CLUB
+            </button>
+        </form>
     </div>
+
+    <script src="../js/index.js"></script>
 </body>
 </html>
-

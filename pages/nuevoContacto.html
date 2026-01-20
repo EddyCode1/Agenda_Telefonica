@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Nuevo Artista</title>
+    <link rel="stylesheet" href="../css/nuevoContacto.css">
 </head>
 <body>
-    
+    <div class="piano-lateral">
+    <button class="tecla" onclick="window.location.href='../index.html'"><span>Cerrar Sesion</span></button>
+    <button class="tecla" onclick="window.location.href='perfilDeUsuario.html'"><span>Perfil</span></button>
+    <button class="tecla" onclick="window.location.href='favoritos.html'"><span>Añadir a favoritos</span></button>
+    <button class="tecla" onclick="window.location.href='nuevoContacto.html'"><span>Nuevo Contacto</span></button>
+    <button class="tecla" onclick="window.location.href='ayuda.html'"><span>Lista de tareas</span></button>
+    <button class="tecla" onclick="window.location.href='contactos.html'"><span>Volver a contactos</span></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+</div>
+
+    <div class="studio-card">
+        <div class="header-studio">
+            <h1>NUEVO CONTACTO</h1>
+            <div class="studio-lights"><span></span><span></span><span></span></div>
+        </div>
+
+        <form class="studio-form">
+            <div class="photo-upload-container">
+    <div class="vinyl-input">
+        <input type="file" id="foto-input" accept="image/*" hidden>
+        <label for="foto-input" class="vinyl-label">
+            <div class="vinyl-center">FOTO</div>
+        </label>
+    </div>
+
+    <div class="visual-add-btn">
+        <span class="plus-symbol">+</span>
+        <span>AÑADIR</span>
+    </div>
+</div>
+          
+            <div class="inputs-grid">
+                <div class="input-group">
+                    <label>NOMBRE</label>
+                    <input type="text" placeholder="Escribe el nombre...">
+                </div>
+                <div class="input-group">
+                    <label>NUMERO TELEFONICO</label>
+                    <input type="text" placeholder="+000 0000 0000">
+                </div>
+                <div class="input-group">
+                    <label>CORREO</label>
+                    <input type="email" placeholder="Contacto@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label>DIRECCION</label>
+                    <input type="text" placeholder="Ciudad, Calle, No.">
+                </div>
+            </div>
+
+            <div class="rec-container">
+                <button type="button" class="btn-rec">
+                    <div class="red-dot"></div>
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>

@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Perfil del Artista</title>
 </head>
 <body>
-    
+    <div class="piano-lateral">
+        <button class="tecla" onclick="window.location.href='../index.html'"><span>Cerrar Sesion</span></button>
+        <button class="tecla" onclick="window.location.href='perfil.html'"><span>Perfil</span></button>
+        <button class="tecla" onclick="window.location.href='favoritos.html'"><span>FAVS</span></button>
+        <button class="tecla" onclick="window.location.href='nuevoContacto.html'"><span>Nuevo</span></button>
+        <button class="tecla" onclick="window.location.href='ayuda.html'"><span>Ayuda</span></button>
+        <button class="tecla" onclick="window.location.href='contactos.html'"><span>Lista</span></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+    </div>
+
+    <div class="detalle-container">
+        <div class="album-container">
+            
+            <div class="vinyl">
+                <img src="../images/perfil_p.png" alt="Foto del Artista">
+            </div>
+
+            <div class="album-cover">
+                <div class="equalizer-container">
+                    <div class="equalizer">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="player-controls">
+                        <div class="play-btn"></div>
+                        <div class="progress-bar-static"></div>
+                    </div>
+                </div>
+
+                <div class="album-data">
+                    <span id="nombre-perfil" class="neon-text">CARGANDO...</span>
+                    
+                    <span class="label"><small>4813-1690</small></span>
+                    <span class="label"> <small>usuario@gmail.com</small></span>
+                    <span class="label"> <small>Guatemala</small></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/perfil.js"></script>
 </body>
 </html>

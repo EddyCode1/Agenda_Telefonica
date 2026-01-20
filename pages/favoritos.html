@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/favoritos.css">
+    <title>Mis Favoritos</title>
+</head>
+<body>
+
+    <h1>Mis Favoritos</h1>
+
+    <!-- Piano lateral -->
+    <div class="piano-lateral">
+        <button class="tecla" onclick="window.location.href='../index.html'"><span>Cerrar Sesión</span></button>
+        <button class="tecla" onclick="window.location.href='perfilDeUsuario.html'"><span>Perfil</span></button>
+        <button class="tecla"><span>Favoritos</span></button>
+        <button class="tecla" onclick="window.location.href='nuevoContacto.html'"><span>Nuevo</span></button>
+        <button class="tecla" onclick="window.location.href='ayuda.html'"><span>Ayuda</span></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+    </div>
+
+    <!-- Botón añadir favoritos -->
+    <div style="text-align:center; margin: 20px;">
+        <button id="btnAbrirModal">Añadir a favoritos</button>
+    </div>
+
+    <!-- CONTENEDOR REAL DE FAVORITOS -->
+    <ul id="contenedorFavoritos"></ul>
+
+    <!-- MODAL SELECTOR -->
+    <div id="modalSelectorFavoritos" style="display:none;">
+        <div class="modal-contenido">
+            <h2>Selecciona un contacto</h2>
+            <ul id="listaSeleccionNombres"></ul>
+            <button onclick="document.getElementById('modalSelectorFavoritos').style.display='none'">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <script src="../js/favoritos.js"></script>
+</body>
+</html>

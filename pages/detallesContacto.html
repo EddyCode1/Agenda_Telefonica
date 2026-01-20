@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/detalleContacto.css">
+    <title>Detalle del Contacto</title>
 </head>
 <body>
-    
+    <div class="piano-lateral">
+    <button class="tecla" onclick="window.location.href='../index.html'"><span>Cerrar Sesion</span></button>
+    <button class="tecla" onclick="window.location.href='perfilDeUsuario.html'"><span>Perfil</span></button>
+    <button class="tecla" onclick="window.location.href='favoritos.html'"><span>Añadir a favoritos</span></button>
+    <button class="tecla" onclick="window.location.href='nuevoContacto.html'"><span>Nuevo Contacto</span></button>
+    <button class="tecla" onclick="window.location.href='ayuda.html'"><span>Lista de tareas</span></button>
+    <button class="tecla" onclick="window.location.href='contactos.html'"><span>Volver a contactos</span></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+    <button class="tecla"></button>
+</div>
+
+      <!-- CONTENIDO PRINCIPAL -->
+    <div id="detalle-vinilo" class="detalle-container">
+
+        <div class="album-container">
+
+            <!-- VINILO = IMAGEN -->
+            <div class="vinyl">
+                <img id="foto" alt="Foto del contacto">
+            </div>
+
+            <!-- PORTADA = DATOS -->
+            <div class="album-cover">
+    <div class="equalizer-container">
+        <div class="equalizer">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="player-controls">
+            <div class="play-btn"></div>
+            <div class="progress-bar-static"></div>
+        </div>
+    </div>
+
+    <div class="album-data">
+        <span id="nombre"></span>
+        <span id="telefono"></span>
+        <span id="email"></span>
+        <span id="direccion"></span>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/detalleContacto.js"></script>
 </body>
-</html>
+</html> 
