@@ -1,24 +1,24 @@
-/* =========================
-   BASE
-========================= */
 body {
     font-family: Arial, sans-serif;
     width: 100%;
     min-height: 100vh;
-    /* Un color base más profundo */
     background-color: #121212; 
     background-image: 
-        /* Mantengo tus líneas pero con opacidad más baja para que sean sutiles */
         repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255,255,255,0.02) 51px, rgba(255,255,255,0.02) 100px),
-        /* Un degradado radial que ilumine el centro */
         radial-gradient(circle, #2c2c2c 0%, #000000 100%);
     background-attachment: fixed;
     margin: 0;
 }
 
-/* =========================
-   LISTA DE CONTACTOS
-========================= */
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: #8f7844ea;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #ffffff;
+    margin-bottom: 40px;
+}
+
 #listaContactos {
     display: grid;
     grid-template-columns: repeat(3, 20%);
@@ -32,9 +32,6 @@ li {
     list-style: none;
 }
 
-/* =========================
-   TARJETA DEL CONTACTO
-========================= */
 .album-container {
     position: relative;
     width: 100%;
@@ -47,9 +44,6 @@ li {
     transform: scale(1.05);
 }
 
-/* =========================
-   PORTADA (DATOS)
-========================= */
 .album-cover {
     position: absolute;
     z-index: 2;
@@ -57,7 +51,7 @@ li {
     height: 90%;
     background-image: url("../images/portada_contactos.png");
     background-size: cover;
-    background-position: center; /* Centra la imagen para que no se corte solo de un lado */
+    background-position: center; 
     background-repeat: no-repeat;
 
     box-shadow: 10px 0 25px rgba(0,0,0,0.3);
@@ -67,43 +61,25 @@ li {
     justify-content: center;
 }
 
-/* =========================
-   DATOS EN PORTADA (ACTUALIZADO)
-========================= */
 .album-data {
     display: flex;
     flex-direction: column;
-    /* Cambiamos el gap por space-between para extremos */
     justify-content: space-between; 
     text-align: center;
     
-    /* Ajustamos el tamaño para que se estire dentro de la portada */
     height: 80%; 
     padding: 10px 0;
-    box-sizing: border-box; /* Para que el padding no rompa el tamaño */
+    box-sizing: border-box; 
 }
 
 .album-data span:first-child {
-    /* El primer span (nombre) se queda arriba */
     align-self: center;
 }
 
 .album-data span:last-child {
-    /* El último span (teléfono) se queda abajo */
     align-self: center;
 }
-/*
 
-.album-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-}*/
-
-/* =========================
-   FOTO DE PERFIL CIRCULAR
-========================= */
 .perfil-circulo {
     position: absolute;
     top: 50%;
@@ -123,9 +99,6 @@ li {
     object-fit: cover;
 }
 
-/* =========================
-   VINILO (CON FOTO)
-========================= */
 .vinyl {
     position: absolute;
     right: 9%;
@@ -134,15 +107,14 @@ li {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     z-index: 1;
-    overflow: hidden; /* CLAVE */
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
     transition: right 0.5s ease;
-    background: none; /* Quitamos el gradiente */
+    background: none; 
 }
 
-/* Imagen dentro del vinilo */
 .vinyl img {
     width: 100%;
     height: 100%;
@@ -155,9 +127,6 @@ li {
     right: -10%;
 }
 
-/* =========================
-   TEXTO DEL VINILO
-========================= */
 .vinyl-data {
     display: flex;
     flex-direction: column;
@@ -172,25 +141,21 @@ li {
     font-size: 0.8em;
 }
 
-
-/* =========================
-   PIANO LATERAL CON BOTONES
-========================= */
 .piano-lateral {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; /* Ancho solicitado */
+    width: 200px; 
     height: 100vh;
     display: flex;
     flex-direction: column;
     z-index: 100;
-    background: #000; /* Fondo para las grietas entre teclas */
+    background: #000; 
     border-right: 4px solid #000;
 }
 
 .tecla {
-    flex: 1; /* Se estiran para llenar la pantalla equitativamente */
+    flex: 1; 
     width: 100%;
     background: white;
     border: 1px solid #ddd;
@@ -199,7 +164,7 @@ li {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Letras al borde derecho */
+    justify-content: flex-end; 
     padding-right: 10px;
     transition: 0.2s, transform 0.1s;
     outline: none;
@@ -209,10 +174,9 @@ li {
     font-family: 'Arial Black', sans-serif;
     font-size: 0.7rem;
     color: #333;
-    pointer-events: none; /* Evita que el texto interfiera en el clic */
+    pointer-events: none; 
 }
 
-/* Efecto al presionar */
 .tecla:active {
     background: #f0f0f0;
     transform: scaleX(0.98);
@@ -225,7 +189,7 @@ li {
 .tecla:not(:nth-child(3n)):not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 80%; /* Las posiciona entre dos teclas */
+    top: 80%; 
     left: 0;
     width: 60px;
     height: 40%; 
@@ -233,10 +197,9 @@ li {
     z-index: 2;
     border-radius: 0 3px 3px 0;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-    pointer-events: none; /* Para que puedas hacer clic en la tecla de abajo */
+    pointer-events: none;
 }
 
-/* Ajuste del margen para que tu contenido no se tape */
 .detalle-container {
     margin-left: 120px;
 }

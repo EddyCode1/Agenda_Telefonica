@@ -1,6 +1,3 @@
-/* =========================
-   BASE (Mismo que contactos)
-========================= */
 body {
     font-family: Arial, sans-serif;
     width: 100%;
@@ -16,9 +13,6 @@ body {
     align-items: center;
 }
 
-/* =========================
-   CONTENEDOR DE DETALLE
-========================= */
 .detalle-container {
     display: flex;
     flex-direction: column;
@@ -29,10 +23,6 @@ body {
     padding: 20px;
 }
 
-
-/* =========================
-   TARJETA DEL CONTACTO
-========================= */
 .album-container {
     position: relative;
     width: 100%;
@@ -45,30 +35,24 @@ body {
     transform: scale(1.05);
 }
 
-/* =========================
-   PORTADA
-========================= */
 .album-cover {
     position: absolute;
     z-index: 2;
     width: 70%;
     height: 80%;
-    background-color: #3b3838; /* Color crema/pergamino para el resto de la tarjeta */
+    background-color: #3b3838; 
     box-shadow: 25px 0 35px rgba(0,0,0,0.3);
     border-radius: 10%;
     display: flex;
-    flex-direction: column; /* Alineación vertical */
+    flex-direction: column; 
     align-items: center;
-    justify-content: flex-start; /* Empuja todo hacia arriba */
-    overflow: hidden; /* Mantiene la imagen dentro de los bordes redondeados */
+    justify-content: flex-start; 
+    overflow: hidden; 
 }
 
-/* =========================
-   ECUALIZADOR NEÓN ROJO VINO
-========================= */
 .equalizer-container {
     width: 85%;
-    height: 50%; /* Ocupa la mitad superior de la portada */
+    height: 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,31 +62,28 @@ body {
 
 .equalizer {
     display: flex;
-    align-items: flex-end; /* Las barras crecen hacia arriba */
+    align-items: flex-end; 
     height: 50px;
     gap: 6px;
 }
 
 .equalizer span {
     width: 7px;
-    background: #d9d9d9; /* Rojo Vino base */
+    background: #d9d9d9; 
     border-radius: 2px;
-    box-shadow: 0 0 8px #ff0000, 0 0 15px #800020; /* Resplandor Neón */
+    box-shadow: 0 0 8px #ff0000, 0 0 15px #800020; 
     animation: dance 0.5s ease-in-out infinite alternate;
 }
 
-/* Animación de las barras */
 @keyframes dance {
     from { height: 10px; }
     to { height: 50px; }
 }
 
-/* Variación de velocidad para efecto aleatorio */
 .equalizer span:nth-child(odd) { animation-duration: 0.4s; }
 .equalizer span:nth-child(even) { animation-duration: 0.7s; }
 .equalizer span:nth-child(3n) { animation-duration: 0.9s; }
 
-/* Controles de reproducción */
 .player-controls {
     width: 80%;
     margin-top: 20px;
@@ -125,7 +106,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 40%; /* Punto de la canción */
+    width: 40%; 
     height: 100%;
     background: #d9d9d9;
     box-shadow: 0 0 10px #ff0000;
@@ -144,10 +125,10 @@ body {
 .album-data {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Empuja el texto hacia la parte inferior */
+    justify-content: flex-end; 
     height: 100%;
     padding-bottom: 20px;
-    padding-left: 30px; /* Desplazamiento a la derecha que pediste antes */
+    padding-left: 30px; 
 }
 
 #nombre-perfil {
@@ -160,13 +141,13 @@ body {
 
 .label {
     font-size: 0.75rem;
-    color: #800020; /* Rojo Vino */
+    color: #800020; 
     font-weight: bold;
     margin: 2px 0;
 }
 
 .label small {
-    color: #eee; /* El dato fijo en blanco/gris claro */
+    color: #eee; 
     font-family: 'Courier New', Courier, monospace;
     margin-left: 5px;
 }
@@ -178,9 +159,6 @@ body {
     margin-left: 10%;
 }
 
-/* =========================
-   FOTO DE PERFIL CIRCULAR
-========================= */
 .perfil-circulo {
     position: absolute;
     top: 50%;
@@ -200,9 +178,6 @@ body {
     object-fit: cover;
 }
 
-/* =========================
-   VINILO
-========================= */
 .vinyl {
     position: absolute;
     left: 45%;
@@ -223,7 +198,6 @@ body {
     left: 71%;
 }
 
-/* Imagen dentro del vinilo */
 .vinyl img {
     width: 100%;
     height: 100%;
@@ -231,9 +205,6 @@ body {
     border-radius: 50%;
 }
 
-/* =========================
-   TEXTO DEL VINILO
-========================= */
 .vinyl-data {
     display: flex;
     flex-direction: column;
@@ -249,24 +220,21 @@ body {
     font-size: 0.8em;
 }
 
-/* =========================
-   PIANO LATERAL CON BOTONES
-========================= */
 .piano-lateral {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; /* Ancho solicitado */
+    width: 200px; 
     height: 100vh;
     display: flex;
     flex-direction: column;
     z-index: 100;
-    background: #000; /* Fondo para las grietas entre teclas */
+    background: #000; 
     border-right: 4px solid #000;
 }
 
 .tecla {
-    flex: 1; /* Se estiran para llenar la pantalla equitativamente */
+    flex: 1; 
     width: 100%;
     background: white;
     border: 1px solid #ddd;
@@ -275,7 +243,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Letras al borde derecho */
+    justify-content: flex-end; 
     padding-right: 10px;
     transition: 0.2s, transform 0.1s;
     outline: none;
@@ -285,10 +253,9 @@ body {
     font-family: 'Arial Black', sans-serif;
     font-size: 0.7rem;
     color: #333;
-    pointer-events: none; /* Evita que el texto interfiera en el clic */
+    pointer-events: none; 
 }
 
-/* Efecto al presionar */
 .tecla:active {
     background: #f0f0f0;
     transform: scaleX(0.98);
@@ -301,7 +268,7 @@ body {
 .tecla:not(:nth-child(3n)):not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 80%; /* Las posiciona entre dos teclas */
+    top: 80%; 
     left: 0;
     width: 60px;
     height: 40%; 
@@ -309,10 +276,9 @@ body {
     z-index: 2;
     border-radius: 0 3px 3px 0;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-    pointer-events: none; /* Para que puedas hacer clic en la tecla de abajo */
+    pointer-events: none; 
 }
 
-/* Ajuste del margen para que tu contenido no se tape */
 .detalle-container {
     margin-left: 120px;
 }

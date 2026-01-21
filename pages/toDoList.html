@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/toDoList.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="piano-lateral">
+        <button class="tecla" onclick="window.location.href='../index.html'"><span>Cerrar Sesion</span></button>
+        <button class="tecla" onclick="window.location.href='perfilDeUsuario.html'"><span>Perfil</span></button>
+        <button class="tecla" onclick="window.location.href='favoritos.html'"><span>Favoritos</span></button>
+        <button class="tecla" onclick="window.location.href='nuevoContacto.html'"><span>Nuevo Contacto</span></button>
+        <button class="tecla" onclick="window.location.href='contactos.html'"><span>Lista de Contactos</span></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+        <button class="tecla"></button>
+    </div>
+
+
+    <div class="main-content">
+        <h1 class="titulo-musical">Lista de Tareas</h1>
+
+        <div class="todo-form">
+            <input type="text" id="tareaInput" placeholder="Escribe tu próximo Hit...">
+            
+            <select id="prioridadInput">
+                <option value="1">Prioridad: (Alta)</option>
+                <option value="2">Prioridad: (Media)</option>
+                <option value="3">Prioridad: (Baja)</option>
+            </select>
+
+            <button onclick="agregarTarea()" class="btn-grabar">GRABAR</button>
+        </div>
+
+        <div class="setlist-container">
+            <ul id="listaTareas"></ul>
+        </div>
+    </div>
+
+    <script src="../js/toDoList.js"></script>
 </body>
 </html>
