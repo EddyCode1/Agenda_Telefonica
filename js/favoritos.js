@@ -1,14 +1,11 @@
-// 1. Definición de contactos fijos (No se pueden eliminar)
 const favoritosFijos = [
     { nombre: "Max Verstappen", telefono: "8556-1234", email: "mv@gmail.com", direccion: "Mónaco", foto: "../images/max_verstappen.png" },
     { nombre: "Mon Laferte", telefono: "3201-1032", email: "ml@gmail.com", direccion: "Mexico", foto: "../images/MonLaferte.png" },
     { nombre: "Noah Sebastian", telefono: "9845-1547", email: "ns@gmail.com", direccion: "Estados Unidos", foto: "../images/Noah_Sebastian.png" }
 ];
 
-// 2. Carga de contactos añadidos manualmente
 let favoritosDinamicos = JSON.parse(localStorage.getItem("fav_dinamicos")) || [];
 
-// 3. Referencia a la lista completa de contactos (Lista Maestra) para el modal
 const listaMaestra = [
    { nombre: "Max Verstappen", telefono: "8556-1234", email: "mv@gmail.com", direccion: "Mónaco", foto: "../images/max_verstappen.png" },
     { nombre: "Aby pulling", telefono: "2059-5678", email: "ap@gmail.com", direccion: "Reino Unido.", foto: "../images/abbi_pulling.png" },
@@ -31,7 +28,6 @@ function renderizarFavoritos() {
         const li = document.createElement("li");
         li.classList.add("item-favorito");
 
-        // Estructura de vinilo con CLASES UNICAS para favoritos
         const cardFav = document.createElement("div");
         cardFav.classList.add("fav-album-wrapper");
 
@@ -47,13 +43,11 @@ function renderizarFavoritos() {
             </div>
         `;
 
-        // Evento para ver detalle
         cardFav.addEventListener("click", () => {
             localStorage.setItem("contactoSeleccionado", JSON.stringify(contacto));
             window.location.href = "detallesContacto.html";
         });
 
-        // Botón eliminar exclusivo
         const btnEliminar = document.createElement("button");
         btnEliminar.classList.add("fav-btn-eliminar");
         btnEliminar.onclick = (e) => {
@@ -74,7 +68,6 @@ function renderizarFavoritos() {
     });
 }
 
-// Lógica para quitar favoritos (Solo funcional para los añadidos manualmente)
 window.quitarDeFavoritos = (index) => {
     if (index >= favoritosFijos.length) {
         const indexReal = index - favoritosFijos.length;
@@ -86,7 +79,6 @@ window.quitarDeFavoritos = (index) => {
     }
 };
 
-// ... Lógica del Modal para añadir nuevos ...
 document.getElementById("btnAbrirModal").onclick = () => {
     const selector = document.getElementById("listaSeleccionNombres");
     selector.innerHTML = "";

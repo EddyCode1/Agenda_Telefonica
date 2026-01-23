@@ -15,7 +15,6 @@ const lista = document.getElementById("listaContactos");
 contactos.forEach(contacto => {
     const li = document.createElement("li");
 
-    // Creamos un contenedor tipo div en lugar de button para mejor control de capas
     const card = document.createElement("div");
     card.classList.add("album-container");
 
@@ -32,7 +31,6 @@ contactos.forEach(contacto => {
     </div>
 `;
 
-    // Evento para ir a detalles (cumpliendo con el requerimiento funcional)
     card.addEventListener("click", () => {
         localStorage.setItem("contactoSeleccionado", JSON.stringify(contacto));
         window.location.href = "detallesContacto.html";
